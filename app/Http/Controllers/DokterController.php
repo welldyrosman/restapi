@@ -18,7 +18,7 @@ class DokterController extends Controller
         $dokter = Dokter::all();
         return response()->json($dokter);
     }
-    public function getyid($id){
+    public function getbyid($id){
         $dokter = Dokter::find($id);
         return response()->json($dokter);
     }

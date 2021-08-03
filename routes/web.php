@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 });
 $router->post('/dokter','DokterController@create');
 $router->get('/dokter','DokterController@index');
+$router->get('/dokter/{id}','DokterController@getbyid');
