@@ -9,13 +9,17 @@ class DokterController extends Controller
     public function create(Request $request)
     {
         $data = $request->all();
-        $book = Dokter::create($data);
+        $dokter = Dokter::create($data);
 
-        return response()->json($book);
+        return response()->json($dokter);
     }
     public function index()
     {
-        $book = Dokter::all();
-        return response()->json($book);
+        $dokter = Dokter::all();
+        return response()->json($dokter);
+    }
+    public function getyid($id){
+        $dokter = Dokter::find($id);
+        return response()->json($dokter);
     }
 }
