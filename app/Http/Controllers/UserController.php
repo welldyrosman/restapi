@@ -44,7 +44,7 @@ class UserController extends Controller
         try{
             $this->validate($request, [
                 'userid' => 'required',
-                'password' => 'required',]);
+                'password' => 'required']);
             $userid=$request->input('userid');
             $password=$request->input('password');
 
@@ -52,7 +52,7 @@ class UserController extends Controller
             if($user==null){
                 throw new Exception("User Tidak ditemukan");
             }
-            return response()->json(MasterFunctionsHelper::OKResponse(true,"Login Berhasil",$user),400);
+            return response()->json(MasterFunctionsHelper::OKResponse(true,"Login Berhasil",$user),200);
         }catch(Exception $e){
             return response()->json(MasterFunctionsHelper::OKResponse(false,$e->getMessage(),null),400);
         }
