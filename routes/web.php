@@ -24,3 +24,6 @@ $router->post('/patient','PatientController@create');
 $router->get('/patient','PatientController@index');
 $router->get('/patient/{id}','PatientController@getbyid');
 $router->get('/test','PatientController@test');
+
+$router->post('/register','UserController@create');
+$router->post('/loginuser','UserController@login');
