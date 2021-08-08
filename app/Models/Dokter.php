@@ -13,7 +13,7 @@ class Dokter extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'poli'
+        'name', 'poli','image'
     ];
 
 }
