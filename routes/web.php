@@ -27,3 +27,4 @@ $router->get('/test','PatientController@test');
 
 $router->post('/register','UserController@create');
 $router->post('/loginuser','UserController@login');
+$router->get('/myreservation/{id}','UserController@reservation');
